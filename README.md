@@ -15,3 +15,16 @@ pip install mysql
 python manage.py makemigrations  
 python manage.py migrate  
 
+# Make some changes in the settings.py Database
+
+DATABASES = {  
+    'default': {  
+        'ENGINE': 'django.db.backends.mysql',  
+        'NAME': 'database name',  
+        'USER' : 'user name',  
+        'PASSWORD':'database password',  
+        'HOST': '127.0.0.1',  
+        'PORT' : '3306'  
+    }
+}
+
