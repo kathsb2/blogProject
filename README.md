@@ -26,6 +26,8 @@ MYSQL_DATABASE=djangoblog
 MYSQL_HOST=127.0.0.1
 MYSQL_PORT=3306
 
+SECRET_KEY = 'django-insecure-0apg5!no#x61y=($$%25g7q8@h+665aa7pjhyna(4-9f^crjh%'
+
 
 #Run the project
 
