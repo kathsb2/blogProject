@@ -11,6 +11,8 @@ https://docs.djangoproject.com/en/4.0/ref/settings/
 """
 
 from pathlib import Path
+import os
+
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -84,16 +86,22 @@ WSGI_APPLICATION = 'blog.wsgi.application'
 #     }
 # }
 
+DB_NAME = os.getenv("MYSQL_DATABASE")
+DB_USERNAME = os.getenv("MYSQL_USER")
+DB_PASSWORD = os.getenv("MYSQL_PASSWORD")
+DB_HOST = os.getenv("MYSQL_HOST")
+DB_PORT = os.getenv("MYSQL_PORT")
+
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'django_blog',
-        'USER' : 'admin',
-        'PASSWORD':'password12345',
-        'HOST': '127.0.0.1',
-        'PORT' : '3306'
+        'NAME': DB_NAME,
+        'USER': DB_USERNAME,
+        'PASSWORD': DB_PASSWORD,
+        'HOST': DB_HOST,
+        'PORT': DB_PORT,
     }
 }
+
 
 
 # Password validation

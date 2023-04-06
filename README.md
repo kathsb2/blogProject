@@ -2,29 +2,33 @@
 
 # To install use pip, Install the following:
 
-pip install django  
-pip install Pillow  
-pip install djangorestframework  
-pip install djangorestframework-simplejwt  
-pip install django_seed  
-pip install mysql  
+pip3 install django
+pip3 install Pillow
+pip3 install djangorestframework
+pip3 install djangorestframework-simplejwt
+pip3 install django_seed
+pip3 install mysql
 
 
 # Migrate the database
 
-python manage.py makemigrations  
-python manage.py migrate  
+python3 manage.py makemigrations
+python3 manage.py migrate
 
-# Make some changes in the settings.py Database
+# ENV File
 
-DATABASES = {  
-    'default': {  
-        'ENGINE': 'django.db.backends.mysql',  
-        'NAME': 'database name',  
-        'USER' : 'user name',  
-        'PASSWORD':'database password',  
-        'HOST': '127.0.0.1',  
-        'PORT' : '3306'  
-    }
-}
+add the env file containing the details below:
+
+MYSQL_ROOT_PASSWORD=root
+MYSQL_USER=admin
+MYSQL_PASSWORD=password12345
+MYSQL_DATABASE=djangoblog
+MYSQL_HOST=127.0.0.1
+MYSQL_PORT=3306
+
+
+#Run the project
+
+python3 manage.py runserver
+
 
